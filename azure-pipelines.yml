@@ -10,8 +10,13 @@ variables:
 
 steps:
 - task: Docker@2
-  displayName: Build an image
   inputs:
-    repository: 104609/final_sw_depl_project
-    command: build
-    Dockerfile: Dockerfile
+    containerRegistry: 'Docker Registry'
+    repository: '104609/final_sw_depl_project'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker Registry'
+    repository: '104609/final_sw_depl_project'
+    command: 'push'
