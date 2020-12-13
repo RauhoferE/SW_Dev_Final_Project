@@ -29,7 +29,7 @@ stages:
     steps:
     - script: |
         envsubst '${TAG}' < deployment-template.yml > deployment.yml
-      displayName: Replace Environment Vriables
+      displayName: Replace Environment Variables
 
     - task: NodeTool@0
       inputs:
@@ -49,7 +49,6 @@ stages:
         Dockerfile: '**/Dockerfile'
         tags: |
           $(Build.BuildId)
-          'latest'
     
     - task: PublishPipelineArtifact@1
       inputs:
