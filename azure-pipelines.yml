@@ -13,10 +13,10 @@ steps:
   inputs:
     containerRegistry: 'Docker Registry'
     repository: '104609/final_sw_depl_project'
-    command: 'build'
+    command: 'sudo build'
     Dockerfile: '**/Dockerfile'
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker Registry'
     repository: '104609/final_sw_depl_project'
-    command: 'push'
+    command: 'sudo push'
