@@ -32,7 +32,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: SamuelDeCarvalho/SWDFinal:${TAG}
+      - image: 104609/final_sw_depl_project
         name: nodeapp
         ports:
         - containerPort: 80
