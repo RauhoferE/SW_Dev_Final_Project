@@ -9,4 +9,3 @@ Every update on the GIT repository will trigger the Azure DevOps pipeline and:
 - Image in AKS Cluster deployed 
 
 
-
