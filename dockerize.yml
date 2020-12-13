@@ -4,12 +4,12 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- dockerize
+- main
 
 variables:
 
   # The service connection configured in the azure devops project settings.
-  azureSubscription: 'azureConnection'
+  azureSubscription: '88547821-16a1-4128-a110-9cc8ffa2e4a2'
   
   # The name of the default virtual machine used in the pipeline.
   defaultVm: 'ubuntu-latest'
@@ -44,7 +44,7 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker Hub'
-        repository: 'SamuelDeCarvalho/SWDFinal'
+        repository: '104609/final_sw_depl_project'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
